@@ -127,30 +127,6 @@
             <path d="M88.4020203,153.455844 L128,113.857864 L167.59798,153.455844 L173.254834,147.79899 L128,102.544156 L125.171573,105.372583 L82.745166,147.79899 L88.4020203,153.455844 Z"></path>
          </svg>
       </cloudflare-app>
-      <button id="doorbell-button" class="bottom_right" style="visibility: hidden;">Feedback</button>
-      <div id="doorbell-background" class="dark" style="display: none;"></div>
-      <div id="doorbell" role="dialog" aria-labelledby="doorbell-title" tabindex="-1" aria-hidden="true" style="display: none;">
-         <div id="doorbell-container" role="dialog" aria-labelledby="doorbell-title">
-            <button id="doorbell-close" title="Close" class="close" aria-label="Close"><span>×</span></button>
-            <form id="doorbell-form" class="dark">
-               <fieldset>
-                  <legend id="doorbell-title">Feedback</legend>
-                  <div id="doorbell-success" class="alert alert-success" style="display: none;"></div>
-                  <textarea placeholder="Send us your comments or suggestions..." aria-label="Send us your comments or suggestions..." class="form-control" name="message" id="doorbell-feedback" required="required"></textarea>
-                  <input type="email" id="doorbell-email" aria-label="Your email address" class="form-control" placeholder="Your email address" name="email" value="">
-                  <div id="g-recaptcha-12101" class="captcha-container">
-                     <div style="width: 304px; height: 78px;">
-                        <div><iframe title="reCAPTCHA" src="./files/anchor.html" width="304" height="78" role="presentation" name="a-yjr5mvyv94co" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe></div>
-                        <textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" aria-hidden="true" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea>
-                     </div>
-                     <iframe style="display: none;" src="./files/saved_resource(1).html"></iframe>
-                  </div>
-                  <div class="buttons"><button class="btn btn-primary" id="doorbell-submit-button">Send</button></div>
-               </fieldset>
-               <a href="https://doorbell.io/?utm_source=feedback_form&amp;utm_medium=web_sdk&amp;utm_campaign=application_12101" target="_blank" rel="noopener noreferrer" id="doorbell-powered-by">Powered by Doorbell.io</a>                            
-            </form>
-         </div>
-      </div>
       <script src="./files/api.js"></script>
       <div style="background-color: rgb(255, 255, 255); border: 1px solid rgb(204, 204, 204); box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 3px; position: absolute; transition: visibility 0s linear 0.3s, opacity 0.3s linear 0s; opacity: 0; visibility: hidden; z-index: 2000000000; left: 0px; top: -10000px;">
          <div style="width: 100%; height: 100%; position: fixed; top: 0px; left: 0px; z-index: 2000000000; background-color: rgb(255, 255, 255); opacity: 0.05;"></div>
@@ -158,5 +134,17 @@
          <div class="g-recaptcha-bubble-arrow" style="border: 10px solid transparent; width: 0px; height: 0px; position: absolute; pointer-events: none; margin-top: -10px; z-index: 2000000000;"></div>
          <div style="z-index: 2000000000; position: relative;"><iframe title="recaptcha challenge expires in two minutes" src="./files/bframe.html" name="c-yjr5mvyv94co" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox" style="width: 100%; height: 100%;"></iframe></div>
       </div>
+      <script type="text/javascript">
+         window.doorbellOptions = {
+            "id": "13130",
+            "appKey": "oBP8f4UtSBFX2OPVYEWTgs2zvXeB1xYFsfFdijRSNnLGdA4BNQDB6ERhc2ubbGU7"
+         };
+         (function(w, d, t) {
+            var hasLoaded = false;
+            function l() { if (hasLoaded) { return; } hasLoaded = true; window.doorbellOptions.windowLoaded = true; var g = d.createElement(t);g.id = 'doorbellScript';g.type = 'text/javascript';g.async = true;g.src = 'https://embed.doorbell.io/button/'+window.doorbellOptions['id']+'?t='+(new Date().getTime());(d.getElementsByTagName('head')[0]||d.getElementsByTagName('body')[0]).appendChild(g); }
+            if (w.attachEvent) { w.attachEvent('onload', l); } else if (w.addEventListener) { w.addEventListener('load', l, false); } else { l(); }
+            if (d.readyState == 'complete') { l(); }
+         }(window, document, 'script'));
+      </script>
    </body>
 </html>
